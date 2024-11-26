@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  background-color: darkolivegreen; /* Set background color */
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.message {
+  margin: 5em 0 2em;
+  text-align: center;
+  font-family: 'papyrus';
+  font-size: 30px;
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+}
+
+.computer img,
+.player img {
+  width: 30%;
+}
+
+.shakeComputer {
+  animation: shakeComputer 0.8s linear;
+}
+
+.shakePlayer {
+  animation: shakePlayer 0.8s linear;
+}
+
+.points {
+  margin: 2em 0;
+  text-align: center;
+}
+
+.computerPoints,
+.playerPoints {
+  margin: 0 3em;
+}
+
+.fixed-images {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Ensure images are above other content */
+  opacity: 1; /* Initially visible */
+  transition: opacity 15s ease-in-out; /* Smooth transition for 15ss */
+}
+
+.fixed-images.fade-out {
+  opacity: 0.4; /* Fade to reduced opacity */
+}
+
+.options {
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.options button {
+  background: none;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #fff;
+  padding: 1em 2em;
+  border-radius: 7px;
+  width: 150px;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all linear;
+}
+
+.options button:hover {
+  background-color: darkcyan;
+  border: 1px solid darkcyan;
+}
+
+@keyframes shakeComputer {
+  0% {
+    transform: rotate(-30deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shakePlayer {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.menu-bar {
+  display: flex;
+  justify-content: center;
+  background: darkslategray;
+  padding: 1em;
+}
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-bar li {
+  cursor: pointer;
+  padding: 1em 2em;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  transition: 0.2s all linear;
+}
+
+.menu-bar li:hover {
+  background-color: darkcyan;
+  border: 1px solid darkcyan;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  color: black;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.result-display {
+  text-align: center;
+  margin-top: 2em;
+}
+
+
+.winner-message {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column; /* Display winner and loser in separate lines */
+  align-items: center;
+}
+
+.winner-line,
+.loser-line {
+  margin-bottom: 0.5em; /* Adjust spacing between lines */
+}
+
+
+

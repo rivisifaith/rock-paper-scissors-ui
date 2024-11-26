@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Rock, Paper, Scissors game</title>
+</head>
+<body>
+  <div class="menu-bar">
+    <ul>
+      <li id="rate-game">Rate Game</li>
+      <li id="view-results">View Results</li>
+      <li id="exit-game">Exit Game</li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="message"><p>ROCK-PAPER-SCISSORS,</p>
+    <br>
+    <p>is the story of</p>
+    <br>
+    <p>two friends,</p>
+    <br>
+    <p>A MURDER</p>
+    <br>
+    <p></p>
+    </div>
+    <div class="images">
+      <div class="computer">
+        <img src="paper.png" />
+      </div>
+      <div class="player">
+        <img src="scissors.png" />
+      </div>
+    </div>
+
+    <div class="fixed-images">
+      <img id="ROCK" src="/image (1).png" alt="Rock image">
+      <img id="PAPER" src="/image (3).png" alt="Paper image">
+      <img id="SCISSORS" src="/image (2).png" alt="Scissors image">
+    </div>
+
+    <div class="points">
+      COMPUTER <span class="computerPoints">0</span> -
+      <span class="playerPoints">0</span> PLAYER
+    </div>
+    <div class="options">
+      <button type="button">ROCK</button>
+      <button type="button">PAPER</button>
+      <button type="button">SCISSORS</button>
+    </div>
+    <div class="result-display">
+      <div class="winner-message"></div>
+      
+    </div>
+  </div>
+  <div id="rating-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Rate the Game</h2>
+      <label for="rating">Rating (0-5):</label>
+<input type="number" id="rating" name="rating" min="0" max="5">
+<br>
+<label for="comment">Comment:</label>
+<textarea id="comment" name="comment"></textarea>
+<br>
+<button id="submit-rating">Submit</button>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
